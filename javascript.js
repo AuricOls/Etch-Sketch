@@ -4,7 +4,6 @@ const parentDiv = document.getElementById("container-main");
 const inputDimension = document.getElementById("dimension");
 const generateButton = document.getElementById("generate");
 
-let opacity = 1;
 function createDiv(num){
     let dimension = num;
 
@@ -19,14 +18,14 @@ function createDiv(num){
         divG.style.height = ((GRIDSIZE/dimension) - 1.6) + "px";
         parentDiv.appendChild(divG);
         divG.style.margin = "0px";
-        opacity = 1;
+
 
         divG.addEventListener("mouseover", function() {
             divG.style.backgroundColor = randomColor();
-            divG.style.opacity = opacity;
-            opacity -= 0.1;
-            if(opacity < 0.1){
-                opacity = 1;
+            divG.style.opacity = divG.style.opacity - 0.1;
+
+            if(divG.style.opacity < 0.1){
+                divG.style.opacity = 1;
             }
         });
     }
