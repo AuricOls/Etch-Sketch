@@ -16,3 +16,23 @@
         height: 620px;
     
 }
+#input-container {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#generate {
+    width: 100px;
+    height: 25px;
+    border: 1px solid black;
+}
+
+#dimension {
+    width: 200px;
+    height: 25px;
+    border: 1px solid black;
+    resize: none;
+}
